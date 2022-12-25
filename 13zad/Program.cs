@@ -5,7 +5,7 @@
 //645 -> 5
 //78 -> третьей цифры нет
 //32679 -> 6
-//int result = -1;
+
 Console.WriteLine("Ведите число");
 int number = Convert.ToInt32(Console.ReadLine());
 

@@ -18,41 +18,41 @@ printArray(arr);
 
 double[,] randomFillArray(int m, int n)
 {
-double[,] array = new double[m, n];
-Random rnd = new Random();
-for (int i = 0; i < m; i++)
-{
-for (int j = 0; j < n; j++)
-{
-array[i, j] = Math.Round(Convert.ToDouble(rnd.NextDouble() * 10 - 5), 1);
-}
-}
-return array;
+    double[,] array = new double[m, n];
+    Random rnd = new Random();
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            array[i, j] = Math.Round(Convert.ToDouble(rnd.NextDouble() * 10 - 5), 1);
+        }
+    }
+    return array;
 }
 
 void inputSizeArray(string massage, string error, ref int num1, ref int num2)
 {
-try
-{
-Console.Write(massage);
-num1 = int.Parse(Console.ReadLine() ?? "");
-Console.Write(massage);
-num2 = int.Parse(Console.ReadLine() ?? "");
-}
-catch (Exception ex)
-{
-Console.WriteLine(error, ex);
-}
+    try
+    {
+        Console.Write(massage);
+        num1 = int.Parse(Console.ReadLine() ?? "");
+        Console.Write(massage);
+        num2 = int.Parse(Console.ReadLine() ?? "");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(error, ex);
+    }
 }
 
 void printArray(double[,] array)
 {
-for (int i = 0; i < array.GetLength(0); i++)
-{
-for (int j = 0; j < array.GetLength(1); j++)
-{
-Console.Write($" {array[i, j]} ");
-}
-Console.WriteLine(" ");
-}
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($" {array[i, j]} ");
+        }
+        Console.WriteLine(" ");
+    }
 }

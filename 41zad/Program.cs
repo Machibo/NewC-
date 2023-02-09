@@ -35,18 +35,27 @@
 // }
 
 
-                                                    // Вариант 2
+// Вариант 2
 
 using System;
-static void Main()
+class zadacha
 {
-    Console.Write("Введи элементы (через пробел):");
-    int[] massiv= Array.ConvertAll(Console.ReadLine().Split(),int.Parse);
-    int count=0;
-    for (int i = 0; i < massiv.Length; i++)
+    static void Main()
     {
-        count++;
+        Console.Write("Введи элементы (через пробел): ");
+        int[] massiv = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+        int count = 0;
+        for (int i = 0; i < massiv.Length; i++)
+        {
+            if (massiv[i] > 0)
+            {
+                count++;
+            }
+
+        }
+
+        Console.WriteLine($"Чисел больше нуля:{count}");
+
     }
 }
-Console.WriteLine($"Чисел больше нуля:{count}");
 

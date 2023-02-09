@@ -11,13 +11,9 @@ inputNumbers(ref b1, ref k1, ref b2, ref k2);
 dotSeach(b1, k1, b2, k2);
 
 void inputNumbers(ref double b1, ref double k1, ref double b2, ref double k2)
-
 {
-
     try
-
     {
-
         Console.Write($"Введите значение b1:");
         b1 = double.Parse(Console.ReadLine() ?? "");
         Console.Write($"Введите значение k1: ");
@@ -30,7 +26,7 @@ void inputNumbers(ref double b1, ref double k1, ref double b2, ref double k2)
     }
     catch (Exception ex)
     {
-    Console.WriteLine($"Ошибка ввода!", ex);
+        Console.WriteLine($"Ошибка ввода!", ex);
     }
 
 }
@@ -38,13 +34,13 @@ void inputNumbers(ref double b1, ref double k1, ref double b2, ref double k2)
 static void dotSeach(double b1, double k1, double b2, double k2)
 
 {
- if (k1 != k2)
+    if (k1 != k2)
 
     {
 
-double x = (b2 - b1) / (k1 - k2);
-double y = k1 * (b2 - b1) / (k1 - k2) + b1;
-Console.WriteLine($"b1={b1}, k1={k1}, b2={b2}, k2={k2} --> ({x};{y})");
+        double x = (b2 - b1) / (k1 - k2);
+        double y = k1 * (b2 - b1) / (k1 - k2) + b1;
+        Console.WriteLine($"b1={b1}, k1={k1}, b2={b2}, k2={k2} --> ({x};{y})");
 
     }
 

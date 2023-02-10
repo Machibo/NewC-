@@ -36,3 +36,6 @@ void printArray(int[,,] arr)
         }
     }
 }
+
+
+
